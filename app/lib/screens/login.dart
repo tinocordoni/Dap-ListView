@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:login_interfaz/core/data/session.dart';
 import '/clases/class_user_info.dart';
 import '/core/data/usuarios_datasource.dart';
 
@@ -11,7 +12,7 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  String appTitle = "CruzAR";
+  String appTitle = "Library";
 
   bool obscurePassword = true;
 
@@ -24,6 +25,7 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: const Color.fromARGB(255, 244, 223, 163),
         body: Builder(
           builder: (context) => Center(
             child: Column(
@@ -32,7 +34,7 @@ class _LoginScreenState extends State<LoginScreen> {
               children: [
                 Text(
                   appTitle,
-                  style: TextStyle(fontSize: 50, color: Colors.blueGrey),
+                  style: TextStyle(fontSize: 50, color: const Color.fromARGB(255, 227, 171, 0)),
                 ),
                 SizedBox(height: 100),
                 SizedBox(
@@ -59,6 +61,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 SizedBox(height: 20),
                 ElevatedButton(
+                  style: ElevatedButton.styleFrom(backgroundColor: Color.fromARGB(255, 227, 171, 0),),
                   onPressed: () {
                     final mail = mailController.text;
                     final password = passwordController.text;
@@ -71,7 +74,8 @@ class _LoginScreenState extends State<LoginScreen> {
                         (usuario) => usuario.mail == mail,
                       );
                       if (password == persona.password) {
-                        context.push("/home", extra: persona);
+                        currentUser = persona;
+                        context.go("/home");
                         informar = "Puede ingresar";
                       }
                     } else {
@@ -83,7 +87,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ).showSnackBar(SnackBar(content: Text(informar)));
                     setState(() {});
                   },
-                  child: Text("Ingresar"),
+                  child: Text("Ingresar", style: TextStyle(color: Color.fromARGB(255, 244, 223, 163))),
                 ),
               ],
             ),
