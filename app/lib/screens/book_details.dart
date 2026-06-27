@@ -23,24 +23,37 @@ class _BookDetailView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.start,
+      child: Column(
         children: [
-          Image.network(book.cover, width: 400, height: 1600),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.start,
+          SizedBox(height: 120),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SizedBox(height: 150),
-              Text(book.name, style: TextStyle(fontSize: 40)),
-              SizedBox(height: 50),
-              Text(book.author, style: TextStyle(fontSize: 30)),
-              SizedBox(height: 50),
-              Text("${book.year}", style: TextStyle(fontSize: 30)),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(24),
+                child: Image.network(
+                  book.cover,
+                  width: 300,
+                  height: 500,
+                  fit: BoxFit.cover,
+                ),
+              ),
+              SizedBox(width: 20),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(book.name, style: TextStyle(fontSize: 40)),
+                  SizedBox(height: 50),
+                  Text(book.author, style: TextStyle(fontSize: 30)),
+                  SizedBox(height: 50),
+                  Text("${book.year}", style: TextStyle(fontSize: 30)),
+                ],
+              ),
+              SizedBox(width: 200),
             ],
           ),
-          SizedBox(width: 200),
         ],
       ),
     );
