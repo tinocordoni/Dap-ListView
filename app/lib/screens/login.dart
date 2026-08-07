@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:login_interfaz/core/data/session.dart';
-import '/clases/class_user_info.dart';
+import '../classes/class_user_info.dart';
 import '/core/data/usuarios_datasource.dart';
 
 class LoginScreen extends StatefulWidget {

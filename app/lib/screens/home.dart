@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:login_interfaz/clases/class_user_info.dart';
+import 'package:login_interfaz/classes/class_user_info.dart';
 import 'package:login_interfaz/core/data/books_datasource.dart';
 import 'package:login_interfaz/widgets/book_view.dart';
 

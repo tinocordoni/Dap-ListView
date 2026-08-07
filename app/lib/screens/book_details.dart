@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:login_interfaz/clases/class_book.dart';
+import 'package:login_interfaz/classes/class_book.dart';
 
 class BookDetailsScreen extends StatelessWidget {
   const BookDetailsScreen({super.key, required this.book});

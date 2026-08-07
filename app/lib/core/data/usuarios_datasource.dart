@@ -1,4 +1,4 @@
-import '/clases/class_user_info.dart';
+import '../../classes/class_user_info.dart';
 
 List<UserInfo> usuarios = [
     UserInfo(

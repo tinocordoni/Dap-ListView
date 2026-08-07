@@ -1,5 +1,5 @@
 import 'package:go_router/go_router.dart';
-import 'package:login_interfaz/clases/class_book.dart';
+import 'package:login_interfaz/classes/class_book.dart';
 import 'package:login_interfaz/core/data/session.dart';
 import 'package:login_interfaz/screens/home.dart';
 import 'package:login_interfaz/screens/login.dart';

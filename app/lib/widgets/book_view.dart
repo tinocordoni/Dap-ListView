@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '/clases/class_book.dart';
+import '../classes/class_book.dart';
 
 class BookItem extends StatelessWidget {
   const BookItem({super.key, required this.book, this.onTap});

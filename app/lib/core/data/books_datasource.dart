@@ -1,4 +1,4 @@
-import 'package:login_interfaz/clases/class_book.dart';
+import 'package:login_interfaz/classes/class_book.dart';
 
 List<Book> listaLibros = [
   Book(
